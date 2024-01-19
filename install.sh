@@ -5,6 +5,8 @@ set -eux
 export DEBIAN_FRONTEND=noninteractive
 export DEBCONF_NONINTERACTIVE_SEEN=true
 
+echo "Distribution information:\n $(lsb_release -a)"
+
 shdir="scripts"
 
 run_order="$shdir/run_order.txt"
