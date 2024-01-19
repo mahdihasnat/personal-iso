@@ -28,8 +28,8 @@ cat > jetbrains-rider.desktop << EOF
 Version=1.0
 Type=Application
 Name=JetBrains Rider
-Icon=/opt/JetBrains.Rider-$RODER_VERSION/bin/rider.svg
-Exec="/opt/JetBrains.Rider-$RODER_VERSION/bin/rider.sh" %f
+Icon=/opt/JetBrains.Rider-$RIDER_VERSION/bin/rider.svg
+Exec="/opt/JetBrains.Rider-$RIDER_VERSION/bin/rider.sh" %f
 Comment=A cross-platform IDE for .NET
 Categories=Development;IDE;
 Terminal=false
