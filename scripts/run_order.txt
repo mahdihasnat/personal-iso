@@ -16,6 +16,9 @@ geany.sh
 docker.sh
 minikube.sh
 kubectl.sh
+insomnia.sh
+rider.sh
+azuredatastudio.sh
 dist_upgrade.sh
 copy_dots.sh
 add_users.sh
