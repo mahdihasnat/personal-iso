@@ -17,12 +17,15 @@
             "intellij_idea_community.sh",
             "pycharm_community.sh",
             "rider.sh",
+            "minikube.sh",
             "codeblocks.sh"
         ]
     },
     {
         "mode": "foreground",
         "scripts": [
+            "docker.sh",
+            "kubectl.sh",
             "code.sh"
         ]
     },
@@ -33,9 +36,6 @@
             "vim.sh",
             "emacs.sh",
             "geany.sh",
-            "docker.sh",
-            "minikube.sh",
-            "kubectl.sh",
             "insomnia.sh",
             "azuredatastudio.sh"
         ]
