@@ -33,7 +33,7 @@ run_scripts() {
 			bashfile=${bashfile_array[$i]}
 			echo "PID = $pid"
 			echo "BASHFILE = $bashfile"
-		    wait "$pid" || echo "Process $shdir/$bashfile exited with ERRORCODE: $?" ; exit $?
+		    wait "$pid" || echo "Process $shdir/$bashfile exited with ERRORCODE: $?" ; exit -1
 			rm -rf "$shdir/$bashfile-dir"
 		done
     else
