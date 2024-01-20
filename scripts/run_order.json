@@ -17,7 +17,6 @@
             "intellij_idea_community.sh",
             "pycharm_community.sh",
             "rider.sh",
-            "minikube.sh",
             "codeblocks.sh"
         ]
     },
@@ -25,6 +24,7 @@
         "mode": "foreground",
         "scripts": [
             "docker.sh",
+            "minikube.sh",
             "kubectl.sh",
             "code.sh"
         ]
