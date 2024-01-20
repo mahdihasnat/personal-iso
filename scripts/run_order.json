@@ -1,0 +1,52 @@
+[
+    {
+        "mode": "foreground",
+        "scripts": [
+            "dist_upgrade.sh",
+            "add_repo.sh"
+        ]
+    },
+    {
+        "mode": "background",
+        "scripts": [
+            "google_chrome.sh",
+            "gcc_10.sh",
+            "python3.10.sh",
+            "openjdk17.sh",
+            "openssh_server.sh",
+            "intellij_idea_community.sh",
+            "pycharm_community.sh",
+            "rider.sh",
+            "codeblocks.sh"
+        ]
+    },
+    {
+        "mode": "foreground",
+        "scripts": [
+            "docker.sh",
+            "minikube.sh",
+            "kubectl.sh",
+            "code.sh"
+        ]
+    },
+    {
+        "mode": "background",
+        "scripts": [
+            "sublime.sh",
+            "vim.sh",
+            "emacs.sh",
+            "geany.sh",
+            "insomnia.sh",
+            "azuredatastudio.sh"
+        ]
+    },
+    {
+        "mode": "foreground",
+        "scripts": [
+            "dist_upgrade.sh",
+            "copy_dots.sh",
+            "add_users.sh",
+            "copy_admin_scripts.sh"
+        ]
+    }
+]
