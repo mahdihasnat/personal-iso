@@ -14,15 +14,21 @@
             "python3.10.sh",
             "openjdk17.sh",
             "openssh_server.sh",
-            "code.sh",
+            "intellij_idea_community.sh",
+            "pycharm_community.sh",
+            "rider.sh",
             "codeblocks.sh"
+        ]
+    },
+    {
+        "mode": "foreground",
+        "scripts": [
+            "code.sh"
         ]
     },
     {
         "mode": "background",
         "scripts": [
-            "pycharm_community.sh",
-            "intellij_idea_community.sh",
             "sublime.sh",
             "vim.sh",
             "emacs.sh",
@@ -31,7 +37,6 @@
             "minikube.sh",
             "kubectl.sh",
             "insomnia.sh",
-            "rider.sh",
             "azuredatastudio.sh"
         ]
     },
