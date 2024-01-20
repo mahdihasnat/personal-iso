@@ -15,13 +15,26 @@ run_scripts() {
         done
     elif [ "$mode" == "background" ]; then
 		pid_array=()
+		bashfile_array=()
         for bashfile in "${scripts[@]}"; do
 			echo -e "\nExecuting $bashfile ...\n"
-		    bash "$shdir/$bashfile" &
-		    pid_array+=($!)
+
+			mkdir -p "$shdir/$bashfile-dir"
+			pushd "$shdir/$bashfile-dir"
+		    bash "$shdir/$bashfile" && pwd &
+			popd
+
+			pid_array+=("$!")
+			bashfile_array+=("$bashfile")
         done
-		for pid in "${pid_array[@]}"; do
-		    wait "$pid" || exit $?
+		# wait for all scripts to finish
+		for i in "${!pid_array[@]}"; do
+			pid=${pid_array[$i]}
+			bashfile=${bashfile_array[$i]}
+			echo "PID = $pid"
+			echo "BASHFILE = $bashfile"
+		    wait "$pid" || echo "Process $shdir/$bashfile exited with ERRORCODE: $?" ; exit $?
+			rm -rf "$shdir/$bashfile-dir"
 		done
     else
         echo "Invalid mode: $mode"
