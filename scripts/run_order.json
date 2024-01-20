@@ -1,0 +1,32 @@
+[
+    {
+        "mode": "foreground",
+        "scripts": [
+            "dist_upgrade.sh",
+            "add_repo.sh",
+            "google_chrome.sh",
+            "gcc_10.sh",
+            "python3.10.sh",
+            "openjdk17.sh",
+            "openssh_server.sh",
+            "code.sh",
+            "codeblocks.sh",
+            "pycharm_community.sh",
+            "intellij_idea_community.sh",
+            "sublime.sh",
+            "vim.sh",
+            "emacs.sh",
+            "geany.sh",
+            "docker.sh",
+            "minikube.sh",
+            "kubectl.sh",
+            "insomnia.sh",
+            "rider.sh",
+            "azuredatastudio.sh",
+            "dist_upgrade.sh",
+            "copy_dots.sh",
+            "add_users.sh",
+            "copy_admin_scripts.sh"
+        ]
+    }
+]
