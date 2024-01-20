@@ -3,7 +3,12 @@
         "mode": "foreground",
         "scripts": [
             "dist_upgrade.sh",
-            "add_repo.sh",
+            "add_repo.sh"
+        ]
+    },
+    {
+        "mode": "background",
+        "scripts": [
             "google_chrome.sh",
             "gcc_10.sh",
             "python3.10.sh",
@@ -22,7 +27,12 @@
             "kubectl.sh",
             "insomnia.sh",
             "rider.sh",
-            "azuredatastudio.sh",
+            "azuredatastudio.sh"
+        ]
+    },
+    {
+        "mode": "foreground",
+        "scripts": [
             "dist_upgrade.sh",
             "copy_dots.sh",
             "add_users.sh",
