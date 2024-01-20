@@ -21,7 +21,7 @@ run_scripts() {
 
 			mkdir -p "$shdir/$bashfile-dir"
 			pushd "$shdir/$bashfile-dir"
-		    bash "$shdir/$bashfile" && pwd &
+		    bash "../$bashfile" &
 			popd
 
 			pid_array+=("$!")
