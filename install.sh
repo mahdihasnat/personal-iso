@@ -1,8 +1,54 @@
+#!/bin/bash
+
 set -eux
 
 shdir="scripts"
 
-for bashfile in $(cat $shdir/run_order.txt); do
-	echo -e "\nExecuting $bashfile ...\n"
-	bash "$shdir/$bashfile"
+run_scripts() {
+    mode=$1
+    scripts=$2
+
+    if [ "$mode" == "foreground" ]; then
+        for bashfile in "${scripts[@]}"; do
+			echo -e "\nExecuting $bashfile ...\n"
+    		bash "$shdir/$bashfile"
+        done
+    elif [ "$mode" == "background" ]; then
+		pid_array=()
+		bashfile_array=()
+        for bashfile in "${scripts[@]}"; do
+			echo -e "\nExecuting $bashfile ...\n"
+
+			mkdir -p "$shdir/$bashfile-dir"
+			pushd "$shdir/$bashfile-dir"
+		    bash "../$bashfile" &
+			popd
+
+			pid_array+=("$!")
+			bashfile_array+=("$bashfile")
+        done
+		# wait for all scripts to finish
+		for i in "${!pid_array[@]}"; do
+			pid=${pid_array[$i]}
+			bashfile=${bashfile_array[$i]}
+			echo "PID = $pid"
+			echo "BASHFILE = $bashfile"
+		    wait "$pid" || (echo "Process $shdir/$bashfile exited with ERRORCODE: $?" && exit -1)
+			rm -rf "$shdir/$bashfile-dir"
+		done
+    else
+        echo "Invalid mode: $mode"
+        exit 1
+    fi
+}
+
+json_data=$(cat $shdir/run_order.json)
+
+for config in $(echo "$json_data" | jq -c '.[]'); do
+    mode=$(echo "$config" | jq -r '.mode')
+    scripts=($(echo "$config" | jq -r '.scripts[]'))
+
+    echo "Executing the following scripts in $mode mode:"
+    echo "Scripts: ${scripts[@]}"
+    run_scripts "$mode" $scripts
 done

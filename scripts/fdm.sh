@@ -11,7 +11,7 @@ echo "Extracting fdm.deb ..."
 sudo dpkg -i fdm.deb
 
 echo "Installing Free Download Manager ..."
-sudo apt-get install -f -y
+sudo apt install -f -y
 
 echo "Removing fdm.deb ..."
 rm fdm.deb
