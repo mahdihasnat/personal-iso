@@ -15,7 +15,12 @@
             "openjdk17.sh",
             "openssh_server.sh",
             "code.sh",
-            "codeblocks.sh",
+            "codeblocks.sh"
+        ]
+    },
+    {
+        "mode": "background",
+        "scripts": [
             "pycharm_community.sh",
             "intellij_idea_community.sh",
             "sublime.sh",
