@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -eux
 
 echo "\nInstalling Insomnia ...\n"

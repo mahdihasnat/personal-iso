@@ -1,3 +1,4 @@
+#!/bin/bash
 set -eux
 
 echo "\nInstalling OpenJDK 17 ...\n"

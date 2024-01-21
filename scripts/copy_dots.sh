@@ -1,3 +1,6 @@
+#!/bin/bash
+set -eux
+
 source vars.sh
 
 cd $DOTS_DIR

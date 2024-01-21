@@ -1,3 +1,6 @@
+#!/bin/bash
+set -eux
+
 echo "Installing GCC 10, G++ 10..."
 
 apt install -o DPkg::Lock::Timeout=-1 -y gcc-10 g++-10
