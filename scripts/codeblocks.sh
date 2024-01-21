@@ -4,5 +4,5 @@
 # https://linuxhint.com/install-code-blocks-ubuntu/
 echo "Installing Codeblocks ..."
 
-add-apt-repository universe -y
-apt install -o DPkg::Lock::Timeout=5 -y codeblocks codeblocks-contrib
+add-apt-get-repository universe -y
+apt-get install -o DPkg::Lock::Timeout=5 -y codeblocks codeblocks-contrib
