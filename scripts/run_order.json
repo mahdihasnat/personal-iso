@@ -2,6 +2,7 @@
     {
         "mode": "foreground",
         "scripts": [
+            "allow_mirror.sh",
             "dist_upgrade.sh",
             "add_repo.sh"
         ]
