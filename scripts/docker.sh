@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eux
+# set -eux
 
 echo "\nInstalling Docker ...\n"
 apt update -y

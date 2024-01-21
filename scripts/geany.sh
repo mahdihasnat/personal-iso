@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eux
+# set -eux
 
 echo "\nInstalling Geany ...\n"
 apt install -o DPkg::Lock::Timeout=-1 -y geany

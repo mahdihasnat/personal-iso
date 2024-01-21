@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eux
+# set -eux
 
 echo "Installing GCC 10, G++ 10..."
 

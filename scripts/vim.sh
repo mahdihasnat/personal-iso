@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eux
+# set -eux
 
 echo "\nInstalling Vim ...\n"
 apt install -o DPkg::Lock::Timeout=-1 -y vim-gtk3
