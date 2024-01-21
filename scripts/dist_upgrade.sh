@@ -1,5 +1,5 @@
 #!/bin/bash
-# set -eux
+set -eux
 
 apt-get update
 apt-get -y dist-upgrade

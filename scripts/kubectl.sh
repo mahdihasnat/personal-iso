@@ -1,5 +1,5 @@
 #!/bin/bash
-# set -eux
+set -eux
 
 echo "\nInstalling Kubectl ...\n"
 

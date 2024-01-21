@@ -1,5 +1,5 @@
 #!/bin/bash
-# set -eux
+set -eux
 
 IDEA_VERSION='2023.2'
 echo "\nInstalling IntelliJ IDEA Community Edition $IDEA_VERSION ...\n"
