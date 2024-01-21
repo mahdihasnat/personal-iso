@@ -2,7 +2,7 @@
 # set -eux
 
 echo "Enabling universe repo.."
-add-apt-get-repository -y universe
+add-apt-repository -y universe
 
 echo "Enabling multiverse repo.."
-add-apt-get-repository -y multiverse
+add-apt-repository -y multiverse
