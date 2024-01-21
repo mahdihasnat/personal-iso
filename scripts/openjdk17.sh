@@ -2,7 +2,7 @@
 set -eux
 
 echo "\nInstalling OpenJDK 17 ...\n"
-apt-get install -o DPkg::Lock::Timeout=60 -y openjdk-17-jdk openjdk-17-jre
+apt-get install -o DPkg::Lock::Timeout=-1 -y openjdk-17-jdk openjdk-17-jre
 echo "\nPrinting Java version ...\n"
 java --version
 echo "\nPrinting Java compiler version ...\n"
