@@ -2,6 +2,6 @@
 set -eux
 
 echo "\nInstalling Geany ...\n"
-apt-get install -o DPkg::Lock::Timeout=-1 -y geany
+apt-get -o DPkg::Lock::Timeout=-1 -y install geany
 echo "\nPrinting Geany version ...\n"
 geany --version
