@@ -4,7 +4,7 @@ set -eux
 
 echo "\nInstalling Docker ...\n"
 apt update -y
-apt install -y ca-certificates curl gnupg
+apt install -o DPkg::Lock::Timeout=-1 -y ca-certificates curl gnupg
 install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor --batch --yes -o /etc/apt/keyrings/docker.gpg
 chmod a+r /etc/apt/keyrings/docker.gpg
@@ -16,6 +16,6 @@ echo \
   tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt update -y
 
-apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+apt install -o DPkg::Lock::Timeout=-1 -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 docker run hello-world

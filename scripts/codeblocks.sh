@@ -4,4 +4,4 @@ set -eux
 echo "Installing Codeblocks ..."
 
 add-apt-repository universe -y
-apt install -y codeblocks codeblocks-contrib
+apt install -o DPkg::Lock::Timeout=-1 -y codeblocks codeblocks-contrib
