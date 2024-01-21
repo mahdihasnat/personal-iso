@@ -7,11 +7,7 @@ echo "\nInstalling Free Download Manager ...\n"
 echo "Downloading Free Download Manager ..."
 wget -O fdm.deb https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb
 
-echo "Extracting fdm.deb ..."
-sudo dpkg -i fdm.deb
-
-echo "Installing Free Download Manager ..."
-sudo apt install -f -y
+apt install -o DPkg::Lock::Timeout=-1 -y ./fdm.deb
 
 echo "Removing fdm.deb ..."
 rm fdm.deb
