@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eux
+set -e
 
 # https://linuxhint.com/install-code-blocks-ubuntu/
 echo "Installing Codeblocks ..."

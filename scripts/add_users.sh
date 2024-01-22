@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 source vars.sh
 

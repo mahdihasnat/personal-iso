@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eux
+set -e
 
 PYCHARM_VERSION="2023.1.4"
 PYCHARM_NAME="pycharm-community-${PYCHARM_VERSION}"

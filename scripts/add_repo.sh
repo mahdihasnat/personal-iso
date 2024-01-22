@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eux
+set -e
 
 echo "Enabling universe repo.."
 add-apt-repository -y universe

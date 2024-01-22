@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eux
+set -e
 
 echo "\nInstalling OpenJDK 17 ...\n"
 apt-get -o DPkg::Lock::Timeout=-1 -y install openjdk-17-jdk openjdk-17-jre
