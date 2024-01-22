@@ -1,7 +1,10 @@
 #!/bin/bash
 set -e
 
-source vars.sh
+pushd "$(dirname "$0")"
+
+source ../vars.sh
+cd ..
 
 cd $ADMIN_SCRIPTS_DIR
 
@@ -13,3 +16,5 @@ for file in *; do
 done
 
 cd -
+
+popd
