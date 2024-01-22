@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -eux
 
 echo "\nInstalling Docker ...\n"
 apt-get -o DPkg::Lock::Timeout=-1 -y update

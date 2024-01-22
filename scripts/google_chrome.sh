@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -eux
 
 echo "Installing Google Chrome.."
 

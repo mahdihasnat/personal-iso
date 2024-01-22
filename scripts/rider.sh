@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -eux
 
 RIDER_VERSION='2023.3.2'
 echo "\nInstalling Rider $RIDER_VERSION ...\n"

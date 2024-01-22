@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -eux
 
 pushd "$(dirname "$0")"
 

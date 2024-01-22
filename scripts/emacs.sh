@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -eux
 
 echo "\nInstalling Emacs ...\n"
 apt-get -o DPkg::Lock::Timeout=-1 -y install emacs

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -eux
 
 # https://www.sublimetext.com/docs/linux_repositories.html#apt
 echo "\nInstalling Sublime Text 4 ...\n"
