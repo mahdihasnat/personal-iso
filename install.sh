@@ -10,7 +10,7 @@ run_scripts() {
     if [ "$mode" == "foreground" ]; then
         for bashfile in "${scripts[@]}"; do
 			echo -e "\nExecuting $bashfile ...\n"
-    		source "$shdir/$bashfile"
+    		bash "$shdir/$bashfile"
         done
     elif [ "$mode" == "background" ]; then
 		pid_array=()
@@ -20,7 +20,7 @@ run_scripts() {
 
 			mkdir -p "$shdir/$bashfile-dir"
 			pushd "$shdir/$bashfile-dir"
-		    source "../$bashfile" &
+		    bash "../$bashfile" &
 			popd
 
 			pid_array+=("$!")
