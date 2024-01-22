@@ -15,6 +15,4 @@ for file in *; do
 	chmod -R -v 750 "$homedir/$file"
 done
 
-cd -
-
 popd
