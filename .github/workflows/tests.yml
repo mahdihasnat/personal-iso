@@ -15,6 +15,9 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
+      - name: Overwrite the run_order.json
+        run: |
+          echo "$(jq -r '.[].scripts |= map(select(. != "copy_admin_scripts.sh"))' scripts/run_order.json)" > scripts/run_order.json
       - name: Run the scripts
         run: |
           sudo bash install.sh
