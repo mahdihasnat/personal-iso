@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -eux
 
 IDEA_VERSION='2023.2'

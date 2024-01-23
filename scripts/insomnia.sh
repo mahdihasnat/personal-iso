@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -eux
 
 echo "\nInstalling Insomnia ...\n"
@@ -10,5 +9,5 @@ echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ 
 
 # Refresh repository sources and install Insomnia
 
-apt update -y
-apt install insomnia -y
+apt-get -o DPkg::Lock::Timeout=-1 -y update
+apt-get -o DPkg::Lock::Timeout=-1 -y install insomnia

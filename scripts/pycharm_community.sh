@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -eux
 
 PYCHARM_VERSION="2023.1.4"
