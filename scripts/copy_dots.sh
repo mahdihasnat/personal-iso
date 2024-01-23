@@ -1,4 +1,10 @@
-source vars.sh
+#!/bin/bash
+set -eux
+
+pushd "$(dirname "$0")"
+
+source ../vars.sh
+cd ..
 
 cd $DOTS_DIR
 
@@ -7,3 +13,5 @@ for file in .[^.]*; do
 done
 
 cd -
+
+popd

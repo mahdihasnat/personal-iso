@@ -1,3 +1,5 @@
-echo "Installing openssh-server..."
+#!/bin/bash
+set -eux
 
-apt install -o DPkg::Lock::Timeout=-1 -y openssh-server
+echo "Installing openssh-server..."
+apt-get -o DPkg::Lock::Timeout=-1 -y install openssh-server

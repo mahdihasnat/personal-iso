@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -eux
 
 RIDER_VERSION='2023.3.2'

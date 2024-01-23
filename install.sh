@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -eux
 
 shdir="scripts"
@@ -42,6 +41,10 @@ run_scripts() {
     fi
 }
 
+# Current directory might not be the same as the install.sh
+# So change to the directory of install.sh
+pushd "$(dirname "$0")"
+
 json_data=$(cat $shdir/run_order.json)
 
 for config in $(echo "$json_data" | jq -c '.[]'); do
@@ -52,3 +55,5 @@ for config in $(echo "$json_data" | jq -c '.[]'); do
     echo "Scripts: ${scripts[@]}"
     run_scripts "$mode" $scripts
 done
+
+popd
