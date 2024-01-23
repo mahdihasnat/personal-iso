@@ -17,7 +17,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Overwrite the run_order.json
         run: |
-          cat scripts/run_order.json | jq '.[] | .scripts |= map(select(. != "copy_admin_scripts.sh"))' > scripts/run_order.json
+          jq -r '.[] | .scripts |= map(select(. != "copy_admin_scripts.sh"))' scripts/run_order.json > tmp.json
+          mv tmp.json scripts/run_order.json
       - name: Run the scripts
         run: |
           sudo bash install.sh
