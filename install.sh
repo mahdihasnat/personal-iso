@@ -1,6 +1,8 @@
 #!/bin/bash
 set -eux
 
+echo "Distribution information:\n $(lsb_release -a)"
+
 shdir="scripts"
 
 run_scripts() {
