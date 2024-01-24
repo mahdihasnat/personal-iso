@@ -18,7 +18,8 @@
             "intellij_idea_community.sh",
             "pycharm_community.sh",
             "rider.sh",
-            "codeblocks.sh"
+            "codeblocks.sh",
+            "dotnet.sh"
         ]
     },
     {
