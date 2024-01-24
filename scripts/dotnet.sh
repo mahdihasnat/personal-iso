@@ -9,6 +9,8 @@ bash dotnet-install.sh --channel 7.0 --version latest --install-dir '/usr/lib/do
 bash dotnet-install.sh --channel 8.0 --version latest --install-dir '/usr/lib/dotnet/'
 
 # create a symbolic link
-ln -s /usr/lib/dotnet/dotnet /usr/bin/dotnet
+# CAUTION: gh-workflows container already had /usr/lib/dotnet.
+# So here -f force override the target file
+ln -s -f /usr/lib/dotnet/dotnet /usr/bin/dotnet
 
 dotnet --info
