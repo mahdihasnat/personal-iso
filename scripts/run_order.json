@@ -19,6 +19,7 @@
             "pycharm_community.sh",
             "rider.sh",
             "codeblocks.sh",
+            "kerberos.sh",
             "dotnet.sh"
         ]
     },
