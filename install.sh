@@ -47,7 +47,7 @@ run_scripts() {
 # So change to the directory of install.sh
 pushd "$(dirname "$0")"
 
-json_data=$(cat $shdir/run_order.json)
+json_data=$(cat install_order.json)
 
 for config in $(echo "$json_data" | jq -c '.[]'); do
     mode=$(echo "$config" | jq -r '.mode')
