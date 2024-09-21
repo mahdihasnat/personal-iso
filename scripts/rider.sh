@@ -4,9 +4,8 @@ set -eux
 RIDER_VERSION='2023.3.2'
 echo "\nInstalling Rider $RIDER_VERSION ...\n"
 
-# download using curl
-curl -LO "https://download.jetbrains.com/rider/JetBrains.Rider-$RIDER_VERSION.tar.gz"
-
+# download using wget
+wget "https://download.jetbrains.com/rider/JetBrains.Rider-$RIDER_VERSION.tar.gz"
 
 # download sha256sum file and verify the checksum
 wget "https://download.jetbrains.com/rider/JetBrains.Rider-$RIDER_VERSION.tar.gz.sha256" -O expected_sha256sum.txt
